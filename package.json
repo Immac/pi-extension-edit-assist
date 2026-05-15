@@ -1,0 +1,31 @@
+{
+  "name": "edit-assist",
+  "version": "0.1.0",
+  "description": "Progressive auto-recovery for pi's edit tool — silent normalization, diagnostic context, then fuzzy auto-recovery after consecutive failures.",
+  "license": "MIT",
+  "type": "module",
+  "main": "./dist/extensions/edit-assist/edit-assist.js",
+  "types": "./dist/extensions/edit-assist/edit-assist.d.ts",
+  "pi": {
+    "extensions": [
+      "./dist/extensions/edit-assist/edit-assist.js"
+    ]
+  },
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc --watch",
+    "install:types": "npm link @earendil-works/pi-coding-agent || true",
+    "test": "vitest run"
+  },
+  "peerDependencies": {
+    "@earendil-works/pi-coding-agent": "*"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.7.0",
+    "vitest": "^4.1.6"
+  },
+  "dependencies": {
+    "typebox": "^1.1.38"
+  }
+}
